@@ -1,0 +1,348 @@
+@import "tailwindcss";
+
+@theme {
+  --font-poppins: 'Poppins', sans-serif;
+
+  --color-bg: #0B0F0E;
+  --color-surface: #121212;
+  --color-surface-light: #181818;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-accent: #1ED760;
+  --color-accent-soft: rgba(30, 215, 96, 0.1);
+  --color-text-main: #FFFFFF;
+  --color-text-muted: #9CA3AF;
+}
+
+:root {
+  --background: #0B0F0E;
+  --foreground: #FFFFFF;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+}
+
+/* =========================
+   CARDS
+   ========================= */
+
+.card-primary {
+  background: linear-gradient(135deg, #161616 0%, #121212 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.card-primary:hover {
+  transform: translateY(-2px) scale(1.01);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+.card-secondary {
+  background: #121212;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 18px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.card-secondary:hover {
+  transform: translateY(-2px) scale(1.01);
+  border-color: rgba(255, 255, 255, 0.1);
+  background: #161616;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.5);
+}
+
+.card-premium {
+  background: linear-gradient(135deg, #161616 0%, #121212 100%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.card-premium:hover {
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.65);
+}
+
+/* =========================
+   GLASS
+   ========================= */
+
+.glass {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.25s ease;
+}
+
+.glass:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+/* =========================
+   BUTTONS
+   ========================= */
+
+.btn-primary {
+  background-color: #1ED760;
+  color: #000000;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 12px 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 16px rgba(30, 215, 96, 0.25);
+}
+
+.btn-primary:hover {
+  transform: scale(1.02);
+  background-color: #1ed760e6;
+  box-shadow: 0 6px 24px rgba(30, 215, 96, 0.42);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #FFFFFF;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 12px 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.25s ease;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.01);
+}
+
+.btn-secondary:active {
+  transform: scale(0.98);
+}
+
+.btn-danger {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  font-weight: 600;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 12px;
+  padding: 12px 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.25s ease;
+}
+
+.btn-danger:hover {
+  background-color: rgba(239, 68, 68, 0.2);
+  border-color: rgba(239, 68, 68, 0.5);
+  transform: scale(1.02);
+}
+
+.btn-danger:active {
+  transform: scale(0.98);
+}
+
+.btn-bounce {
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease;
+}
+
+.btn-bounce:hover {
+  transform: scale(1.04);
+}
+
+.btn-bounce:active {
+  transform: scale(0.96);
+}
+
+/* =========================
+   INPUTS
+   ========================= */
+
+.input-premium {
+  width: 100%;
+  background-color: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 14px 16px;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 0.875rem;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.input-premium::placeholder {
+  color: #64748b;
+}
+
+.input-premium:focus {
+  border-color: #1ED760;
+  box-shadow: 0 0 0 1px #1ED760, 0 0 16px rgba(30, 215, 96, 0.12);
+  background-color: #1e1e1e;
+}
+
+.input-base {
+  width: 100%;
+  background-color: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 12px 16px;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 0.875rem;
+  outline: none;
+  transition: all 0.25s ease;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.input-base::placeholder {
+  color: #64748b;
+}
+
+.input-base:focus {
+  border-color: #1ED760;
+  box-shadow: 0 0 0 1px #1ED760, 0 0 16px rgba(30, 215, 96, 0.12);
+  background-color: #1e1e1e;
+}
+
+/* Dark theme for all native select elements */
+select {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+select option {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+/* =========================
+   TYPOGRAPHY EFFECTS
+   ========================= */
+
+.neon-text {
+  text-shadow: 0 0 20px rgba(30, 215, 96, 0.55);
+}
+
+/* =========================
+   SHADOW UTILITIES
+   ========================= */
+
+.shadow-glow {
+  box-shadow: 0 4px 20px rgba(30, 215, 96, 0.32);
+}
+
+/* =========================
+   LAYOUT UTILITIES
+   ========================= */
+
+.layout-padding {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .layout-padding {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+/* =========================
+   SCROLLBAR
+   ========================= */
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0F0E;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2A2A2A;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3A3A3A;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* =========================
+   ANIMATIONS
+   ========================= */
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stagger-in > * {
+  opacity: 0;
+  animation: slideUpFade 0.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+.stagger-in > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger-in > *:nth-child(2) { animation-delay: 0.2s; }
+.stagger-in > *:nth-child(3) { animation-delay: 0.3s; }
+.stagger-in > *:nth-child(4) { animation-delay: 0.4s; }
+.stagger-in > *:nth-child(5) { animation-delay: 0.5s; }
+
+/* =========================
+   PROGRESS BAR
+   ========================= */
+
+.progress-container {
+  height: 8px;
+  background: #1A1A1A;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #1ED760;
+  border-radius: 999px;
+  transition: width 1s cubic-bezier(0.65, 0, 0.35, 1);
+}
